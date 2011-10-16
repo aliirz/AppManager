@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @appt_request.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @appt_request.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @appt_request.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @appt_request.address %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @appt_request.postcode %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @appt_request.city %>
+</p>
+
+<p>
+  <b>Requested for:</b>
+  <%= @appt_request.requested_for %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%= @appt_request.client_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_appt_request_path(@appt_request) %> |
+<%= link_to 'Back', appt_requests_path %>

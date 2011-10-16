@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @feedback.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @feedback.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @feedback.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @feedback.address %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @feedback.postcode %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%= @feedback.client_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>
