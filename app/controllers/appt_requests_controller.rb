@@ -45,6 +45,7 @@ class ApptRequestsController < ApplicationController
 
     respond_to do |format|
       if @appt_request.save
+        ApptRequestMailer.notify_email(@appt_request).deliver
         format.html { redirect_to(@appt_request, :notice => 'Appt request was successfully created.') }
         format.xml  { render :xml => @appt_request, :status => :created, :location => @appt_request }
 		format.json { render :json => @appt_request, :status => :created, :location => @appt_request}

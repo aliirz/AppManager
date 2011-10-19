@@ -1,4 +1,6 @@
 AppManager::Application.routes.draw do
+  resources :clients
+
   resources :appt_requests
 
   get "client/index"

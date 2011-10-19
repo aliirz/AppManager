@@ -46,6 +46,7 @@ class SubscriptionsController < ApplicationController
 
     respond_to do |format|
       if @subscription.save
+        SubscriptionsMailer.notify_email(@subscription).deliver
         format.html { redirect_to(@subscription, :notice => 'Subscription was successfully created.') }
         format.xml  { render :xml => @subscription, :status => :created, :location => @subscription }
 		format.json {render :json => @subscription, :status => :created, :location => @subscription}
